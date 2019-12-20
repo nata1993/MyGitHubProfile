@@ -5,4 +5,5 @@ gitHub.GetUserData()
 .then(data => {
     console.log(data.profile);
     ui.ShowProfile(data.profile);
+    ui.ShowRepos(data.repos);
 });
