@@ -26,7 +26,13 @@ class UI
                         <li class="list-group-item"> Location: ${user.location}</li>
                         <li class="list-group-item"> Member since: ${user.created_at}</li>
                         <li class="list-group-item"> Bio: ${user.bio}</li>
-                        <li class="list-group-item"> Hireable: ${user.hireable}</li>
+        `;
+
+        if(!user.hireable)
+            this.profile.innerHTML += `<li class="list-group-item"> Hireable: Yes</li>`;
+        else
+            this.profile.innerHTML += `<li class="list-group-item"> Hireable: No</li>`;
+        this.profile.innerHTML += `
                     </ul>
                 </div>                          
             </div>
