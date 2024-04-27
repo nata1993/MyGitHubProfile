@@ -7,7 +7,8 @@ class UI
 
     ShowProfile(user)
     {
-        this.profile.innerHTML = `
+        let bioHTML = "";
+        bioHTML += `
         <div class="card card-body mb-3">
             <div class="row">
                 <div class="col-md-3">
@@ -28,11 +29,11 @@ class UI
                         <li class="list-group-item"> Bio: ${user.bio}</li>
         `;
 
-        if(!user.hireable)
-            this.profile.innerHTML += `<li class="list-group-item"> Hireable: Yes</li>`;
+        if(user.hireable)
+            bioHTML += `<li class="list-group-item"> Hireable: Yes</li>`;
         else
-            this.profile.innerHTML += `<li class="list-group-item"> Hireable: No</li>`;
-        this.profile.innerHTML += `
+            bioHTML += `<li class="list-group-item"> Hireable: No</li>`;
+            bioHTML += `
                     </ul>
                 </div>                          
             </div>
@@ -41,6 +42,7 @@ class UI
         <h3 class="page-heading mb-3"> Latest repos</h3>
         <div id="repos"></div>
         `;
+        this.profile.innerHTML = bioHTML;
     }
 
     ShowRepos(repos)
