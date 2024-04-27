@@ -33,7 +33,7 @@ class UI
             bioHTML += `<li class="list-group-item"> Hireable: Yes</li>`;
         else
             bioHTML += `<li class="list-group-item"> Hireable: No</li>`;
-            bioHTML += `
+        bioHTML += `
                     </ul>
                 </div>                          
             </div>
