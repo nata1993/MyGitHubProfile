@@ -12,15 +12,15 @@ class UI
         <div class="card card-body mb-3">
             <div class="row">
                 <div class="col-md-3">
-                    <h3 class="font-weight-bold text-info">${user.login}</h3>
+                    <h3 class="card-title">${user.login}</h3>
                     <img class="img-fluid mb-2" src="${user.avatar_url}">
-                    <a class="btn btn-primary btn-block" target="_blank" href="${user.html_url}">Go to Profile</a>
+                    <a class="btn btn-primary d-grid" target="_blank" href="${user.html_url}">Go to Profile</a>
                 </div>
 
                 <div class="col-md-9">
-                    <span class="badge badge-primary"><b>Public Repos: </b>${user.public_repos}</span>
-                    <span class="badge badge-success"><b>Followers: </b>${user.followers}</span>
-                    <span class="badge badge-warning"><b>Following: </b>${user.following}</span>
+                    <span class="badge text-bg-primary"><b>Public Repos: </b><span class="badge text-bg-light">${user.public_repos}</span></span>
+                    <span class="badge text-bg-success"><b>Followers: </b><span class="badge text-bg-light">${user.followers}</span></span>
+                    <span class="badge text-bg-warning"><b>Following: </b><span class="badge text-bg-light">${user.following}</span></span>
 
                     <ul class="list-group">
                         <li class="list-group-item"><b>Website/Blog: </b>${user.blog}</li>
@@ -62,7 +62,7 @@ class UI
                         </div>
 
                         <div class="col-md-2">
-                            <span class="badge badge-primary"> Followers: ${repo.forks_count}</span>
+                            <span class="badge text-bg-secondary">Followers: <span class="badge text-bg-light">${repo.forks_count}</span></span>
                         </div>
                     </div>
                 </div>
