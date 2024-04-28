@@ -47,28 +47,33 @@ class UI
 
     ShowRepos(repos)
     {
-        let reposArrayElement = '';
-
+        let reposArrayElement = `
+        <div class="card card-body mb-3">
+            <div class="row">
+                <ul class="list-group list-group-flush">
+            `;
         repos.forEach(repo => {
             reposArrayElement += `
-                <div class="card card-body mb-3">
+            <li class="list-group-item">
+                <div class="container">
                     <div class="row">
                         <div class="col-md-3">
                             <a href="${repo.html_url}" target="_blank"> ${repo.name}</a>
                         </div>
-
+            
                         <div class="col-md-7">
                             <span>${repo.description}</span>
                         </div>
-
+            
                         <div class="col-md-2">
                             <span class="badge text-bg-secondary">Followers: <span class="badge text-bg-light">${repo.forks_count}</span></span>
                         </div>
                     </div>
-                </div>
-            `;
-
-            document.getElementById('repos').innerHTML = reposArrayElement;
+            </li>`;
         });
+        reposArrayElement += `
+            </ul>
+        </div>`;
+        document.getElementById('repos').innerHTML = reposArrayElement;
     }
 }
