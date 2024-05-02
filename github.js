@@ -3,7 +3,7 @@ class GitHub
     constructor()
     {
         this.client_ID = 'bba931d5d676e18aa68b';
-        this.client_secret = 'a0411944c8ef739affd2a028f46e93ebf12ba95b';
+        this.client_secret = process.env.CLIENT_SECRET;
         this.repos_count = 10;
         this.repos_sort = 'created: asc';
         this.user = 'nata1993';
